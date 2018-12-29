@@ -1,0 +1,93 @@
+<odoo>
+  <data>
+ <record id="sale_order_pol" model="ir.model.fields">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copy" eval="False"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">POL</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">sale.order</field>
+    <field name="model_id" ref="sale.model_sale_order"/>
+    <field name="name">POL</field>
+    <field name="on_delete">set null</field>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation">aircargo.city</field>
+    <field name="relation_field" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="track_visibility" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">many2one</field>
+  </record>
+      
+      
+      
+      
+      
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="aircargo.list">
+      <field name="name">aircargo list</field>
+      <field name="model">aircargo.aircargo</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="aircargo.action_window">
+      <field name="name">aircargo window</field>
+      <field name="res_model">aircargo.aircargo</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="aircargo.action_server">
+      <field name="name">aircargo server</field>
+      <field name="model_id" ref="model_aircargo_aircargo"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="aircargo" id="aircargo.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="aircargo.menu_1" parent="aircargo.menu_root"/>
+    <menuitem name="Menu 2" id="aircargo.menu_2" parent="aircargo.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="aircargo.menu_1_list" parent="aircargo.menu_1"
+              action="aircargo.action_window"/>
+    <menuitem name="Server to list" id="aircargo" parent="aircargo.menu_2"
+              action="aircargo.action_server"/>
+    -->
+  </data>
+</odoo>

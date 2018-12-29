@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="sale.action_order_report_all" model="ir.actions.act_window" context="{'studio': True}">
+    <field name="auto_search" eval="True"/>
+    <field name="binding_model_id" eval="False"/>
+    <field name="binding_type">action</field>
+    <field name="context">{'search_default_Sales':1, 'group_by_no_leaf':1,'group_by':[]}</field>
+    <field name="domain" eval="False"/>
+    <field name="filter" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="help"><![CDATA[<p>This report performs analysis on your quotations and sales orders. Analysis check your sales revenues and sort it by different group criteria (salesman, partner, product, etc.) Use this report to perform analysis on sales not having invoiced yet. If you want to analyse your turnover, you should use the Invoice Analysis report in the Accounting application.</p>]]></field>
+    <field name="limit">80</field>
+    <field name="multi" eval="False"/>
+    <field name="name">Sales Analysis</field>
+    <field name="res_model">sale.report</field>
+    <field name="search_view_id" ref="sale.view_order_product_search"/>
+    <field name="src_model" eval="False"/>
+    <field name="target">current</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="usage" eval="False"/>
+    <field name="view_id" eval="False"/>
+    <field name="view_mode">graph,pivot,tree</field>
+    <field name="view_type">form</field>
+  </record>
+  <record id="studio_customization.new_button_3f6444a7-ab36-4fec-98c2-b4f81ddf7e59" model="ir.actions.act_window" context="{'studio': True}">
+    <field name="auto_search" eval="True"/>
+    <field name="binding_model_id" eval="False"/>
+    <field name="binding_type">action</field>
+    <field name="context">{'search_default_x_studio_field_5iXMK': active_id,'default_x_studio_field_5iXMK': active_id}</field>
+    <field name="domain">[('x_studio_field_5iXMK', '=', active_id)]</field>
+    <field name="filter" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="limit">80</field>
+    <field name="multi" eval="False"/>
+    <field name="name">New Button</field>
+    <field name="res_model">purchase.order</field>
+    <field name="search_view_id" eval="False"/>
+    <field name="src_model" eval="False"/>
+    <field name="target">current</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="usage" eval="False"/>
+    <field name="view_id" eval="False"/>
+    <field name="view_mode">tree,form</field>
+    <field name="view_type">form</field>
+  </record>
+  <record id="studio_customization.operations_aircargo_487dd457-f50d-49f5-acaf-c6a7a080b553" model="ir.actions.act_window" context="{'studio': True}">
+    <field name="auto_search" eval="True"/>
+    <field name="binding_model_id" eval="False"/>
+    <field name="binding_type">action</field>
+    <field name="context">{}</field>
+    <field name="domain" eval="False"/>
+    <field name="filter" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="help"><![CDATA[<p>
+                        This is your new action ; by default, it contains a list view and a form view.
+                    </p>
+                    <p>
+                        You can start customizing these screens by clicking on the Studio icon on the
+                        top right corner (you can also customize this help message there).
+                    </p>
+                ]]></field>
+    <field name="limit">80</field>
+    <field name="multi" eval="False"/>
+    <field name="name">Operations Aircargo</field>
+    <field name="res_model">sale.order</field>
+    <field name="search_view_id" eval="False"/>
+    <field name="src_model" eval="False"/>
+    <field name="target">current</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="usage" eval="False"/>
+    <field name="view_id" eval="False"/>
+    <field name="view_mode">tree,form</field>
+    <field name="view_type">form</field>
+  </record>
+</odoo>
